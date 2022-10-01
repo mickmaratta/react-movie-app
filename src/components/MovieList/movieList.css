@@ -3,6 +3,12 @@
     transition: transform 0.2s;
     height: 30vh;
   }
+
+  @media only screen and (max-width: 600px) {
+    .image-container {
+     height: 17vh;
+    }
+  }
   
   .image-container:hover {
     cursor: pointer;

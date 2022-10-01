@@ -96,7 +96,6 @@ const App = () => {
           movies={movies}
           FavoriteComponent={AddFavorites}
           handleFavoriteClick={addFavoriteMovie}
-          handleWatchLaterClick={addWatchLaterMovie} 
           favoriteText='Favorite'
           watchLaterText='To Watch'
         />
@@ -109,18 +108,6 @@ const App = () => {
           movies={favorites}
           FavoriteComponent={RemoveFavorites}
           handleFavoriteClick={removeFavoriteMovie}
-          handleWatchLaterClick={null}
-          favoriteText='Remove'
-        />
-      </div>
-      <div className='row d-flex align-items-center mt-4 mb-4'>
-        <MovieListHeading heading='MOVIES TO WATCH...' />
-      </div>
-      <div className='row'>
-        <MovieList 
-          movies={watchLater}
-          FavoriteComponent={RemoveFavorites}
-          handleFavoriteClick={removeWatchLaterMovie}
           handleWatchLaterClick={null}
           favoriteText='Remove'
         />
