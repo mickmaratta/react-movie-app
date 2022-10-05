@@ -58,22 +58,6 @@ const App = () => {
     saveToLocalStorage('react-movie-app-favorites', newFavoriteList);
   }
 
-  const addWatchLaterMovie = movie => {
-    const newWatchLaterList = [...watchLater, movie]
-    if (watchLater.includes(movie)) {
-      return
-    } else {
-      setWatchLater(newWatchLaterList)
-      saveToLocalStorage('react-movie-app-watch-later', newWatchLaterList);
-    }
-  }
-
-  const removeWatchLaterMovie = (movie) => {
-    const newWatchLaterList = watchLater.filter((favorite) => favorite.imdbID !== movie.imdbID)
-    setWatchLater(newWatchLaterList);
-    saveToLocalStorage('react-movie-app-watch-later', newWatchLaterList);
-  }
-
   console.log(movies)
   return (
     <div className='container-fluid movie-app'>
